@@ -1,0 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   printf.h                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: atran <atran@student.hive.fi>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/13 17:03:22 by atran             #+#    #+#             */
+/*   Updated: 2024/11/13 22:03:58 by atran            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef PRINTF_H
+# define PRINTF_H
+# include <stdarg.h>
+# include <unistd.h>
+
+int	ft_printf(const char *str, ...);
+int	ft_unsigned_nbr(unsigned int n);
+int	ft_unsigned_hex(unsigned long int n, char c);
+int	ft_putnbr(int n);
+int	ft_putchar(char c);
+int	ft_putstr(char *s);
+
+#endif
