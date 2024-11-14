@@ -6,7 +6,7 @@
 #    By: atran <atran@student.hive.fi>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/13 17:13:08 by atran             #+#    #+#              #
-#    Updated: 2024/11/13 22:02:30 by atran            ###   ########.fr        #
+#    Updated: 2024/11/14 14:26:19 by atran            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libftprintf.a
 
 SRCS = ft_printf.c ft_print_nbr.c
 
-OBJS = $(SRCS:.c=.o)
+OBJS = $(SRCS:%.c=%.o)
 
 CC = cc
 
@@ -26,6 +26,9 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 		ar rcs $(NAME) $(OBJS)
+
+%.o: %.c
+	$(CC) $(CFLAG) -c $< -o $@
 
 clean:
 		$(RM) $(OBJS)
